@@ -1,4 +1,4 @@
-## 💻 Retos HTML & CSS — ManzDev Challenge
+## 💻 Retos HTML-30-day Challenge — ManzDev 
 
 Repositorio que recopila los ejercicios prácticos del **Challenge de HTML y CSS** propuesto por [ManzDev](https://lenguajehtml.com/challenge/).
 
@@ -22,17 +22,38 @@ No se trata de rehacer componentes de Bootstrap o copiar estilos de otros framew
 ---
 
 ## 📁 Estructura del repositorio
-
-  /
-  ├── 01-reto-numero/
-  │ ├── index.html
-  │ └── style.css
-  │ └── readme.md
-  ├── 02-otro-reto/
-  │ ├── index.html
-  │ └── style.css
-  ├── ...
-  └── README.md
+<!-- 
+/
+├── 01-reto-numero/
+│   ├── index.html
+│   ├── style.css
+│   └── readme.md
+├── 02-otro-reto/
+│   ├── index.html
+│   ├── global.css
+│   └── readme.md
+├── ...
+└── README.md -->
+/
+├── index.html               
+├── style.css             
+├── script.js               
+├── /retos                 
+│   ├── reto-01/
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── readme.md
+│   ├── reto-02/
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── readme.md
+│   └── ...
+├── /assets               <!--   Imágenes, fuentes, íconos comunes -->
+│   ├── logo.png
+│   ├── avatar.webp
+│   └── favicon.ico
+├── README.md               <!--  Descripción del proyecto completo -->
+└── LICENSE
 
 - Cada carpeta representa un reto individual.
 - Dentro de cada una encontrarás los archivos necesarios para correrlo localmente.
@@ -53,3 +74,18 @@ Este repositorio es un ejercicio personal con fines educativos y de práctica.
 ## 📌 Licencia
 
 Este repositorio está bajo la licencia MIT, pero recuerda que la autoría de los retos es de ManzDev. Si vas a compartir tu propia versión, ¡dale el crédito que merece! 💖
+
+
+/
+├── Retos
+│   ├── Reto 1
+│   |   ├── index.html
+│   |   ├── style.css
+│   |   └── readme.md  
+│   ├── Reto 2
+│   |   ├── index.html
+│   |   ├── style.css
+│   |   └── readme.md  
+|
+├──....
+├── Recursos ?
