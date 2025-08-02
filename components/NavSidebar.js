@@ -1,8 +1,12 @@
+import styles from "../components/NavSidebar.css" with { type: "css" };
+
 class Sidebar extends HTMLElement {
   constructor() {
     super();
+    this.attachShadow({mode: "open"});
+    this.shadowRoot.adoptedStyleSheets.push(styles);
 
-    this.innerHTML = `
+    this.shadowRoot.innerHTML = `
       <aside class="sidebar">
         <header>
           <img src="/assets/images/perro programador.webp" alt="Imagen de usuario" title="Foto de Perfíl" fetchpriority="high" >

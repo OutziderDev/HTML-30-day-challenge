@@ -22,7 +22,8 @@ No se trata de rehacer componentes de Bootstrap o copiar estilos de otros framew
 ---
 
 ## 📁 Estructura del repositorio
-
+```text
+/
 ├── index.html               
 ├── style.css             
 ├── script.js               
@@ -36,12 +37,22 @@ No se trata de rehacer componentes de Bootstrap o copiar estilos de otros framew
 │   │   ├── style.css
 │   │   └── readme.md
 │   └── ...
-├── /assets               <!--   Imágenes, fuentes, íconos comunes -->
-│   ├── logo.png
-│   ├── avatar.webp
-│   └── favicon.ico
-├── README.md               <!--  Descripción del proyecto completo -->
+|
+├── /assets                
+│   ├── fonts
+│   │   └── ...
+│   ├── icons
+│   │   └── ...
+│   └── images
+│   │   └── ..
+│   └── ...
+├── /components
+│   ├── Sidebar.js
+│   └── ...
+|
+├── README.md              
 └── LICENSE
+```
 
 - Cada carpeta representa un reto individual.
 - Dentro de cada una encontrarás los archivos necesarios para correrlo localmente.
@@ -62,18 +73,3 @@ Este repositorio es un ejercicio personal con fines educativos y de práctica.
 ## 📌 Licencia
 
 Este repositorio está bajo la licencia MIT, pero recuerda que la autoría de los retos es de ManzDev. Si vas a compartir tu propia versión, ¡dale el crédito que merece! 💖
-
-
-/
-├── Retos
-│   ├── Reto 1
-│   |   ├── index.html
-│   |   ├── style.css
-│   |   └── readme.md  
-│   ├── Reto 2
-│   |   ├── index.html
-│   |   ├── style.css
-│   |   └── readme.md  
-|
-├──....
-├── Recursos ?
