@@ -24,8 +24,78 @@ nav-sidebar{
   display: contents;
 }
 
-main{
+.menu-opc {
   flex: 1;
   padding: 1rem;
-  color: var(--color-verdoso); 
+
+  h1 {
+    color: var(--color-verdoso);
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  h2 {
+    color: var(--color-naranja);
+    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-inline: auto;
+    text-wrap: nowrap;
+
+    &::after, &::before {
+      content: '';
+      height: 0px;
+      flex-grow: 1;
+      border: 1px solid var(--color-naranja);
+    }
+  }
+
+  .grid-menu {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    max-width: 80%;
+    margin-inline: auto;
+    margin-block: 3%;
+  }
+
+  .menu-card {
+    text-decoration: none;
+    padding: 0.5rem;
+    background-color: var(--color-light-darkblue);
+    border: thick solid var(--color-decorador);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+    & > .text {
+      color: var(--color-verdoso);
+      font-size: 1.4rem;
+      transition: all 0.2s ease;
+    }
+
+    & > .number {
+      color: var(--color-naranja);
+      font-size: 3rem;
+      transition: all 0.2s ease;
+    }
+
+    &:hover{
+      transform: scale(1.05);
+
+      & > .text{
+        transform: scale(0.8);
+      }
+      & > .number{
+        transform: scale(1.2);
+      }
+    }
+  }
 }
