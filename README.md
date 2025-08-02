@@ -22,19 +22,7 @@ No se trata de rehacer componentes de Bootstrap o copiar estilos de otros framew
 ---
 
 ## 📁 Estructura del repositorio
-<!-- 
-/
-├── 01-reto-numero/
-│   ├── index.html
-│   ├── style.css
-│   └── readme.md
-├── 02-otro-reto/
-│   ├── index.html
-│   ├── global.css
-│   └── readme.md
-├── ...
-└── README.md -->
-/
+
 ├── index.html               
 ├── style.css             
 ├── script.js               
