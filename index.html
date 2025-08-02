@@ -13,31 +13,31 @@
     <h1>HTML 30-day Challenge</h1>
     <h2>ManzDev Challenge</h2>
     <section class="grid-menu">
-      <a href="/Retos/01" class="menu-card">
-        <span class="text">Reto</span>
-        <span class="number">1</span>
-      </a>
-      <a href="/Retos/01" class="menu-card">
-        <span class="text">Reto</span>
-        <span class="number">1</span>
-      </a>
-      <a href="/Retos/01" class="menu-card">
-        <span class="text">Reto</span>
-        <span class="number">1</span>
-      </a>
-      <a href="/Retos/01" class="menu-card">
-        <span class="text">Reto</span>
-        <span class="number">1</span>
-      </a>
-      <a href="/Retos/01" class="menu-card">
-        <span class="text">Reto</span>
-        <span class="number">1</span>
-      </a>
-      <a href="/Retos/01" class="menu-card">
-        <span class="text">Reto</span>
-        <span class="number">1</span>
-      </a>
+      
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.grid-menu')
+
+      for (let index = 1; index <= 30; index++) {
+        const card = document.createElement('a')
+        card.classList.add('menu-card')
+        card.href= `/Retos/${index}`
+        const text = document.createElement('span')
+        text.classList.add('text')
+        const number = document.createElement('span')
+        number.classList.add('number')
+
+        text.innerText = 'Día';
+        number.innerText= index;
+
+        card.append(text)
+        card.append(number)
+        grid.append(card)
+      }
+
+    })
+  </script>
 </body>
 </html>
