@@ -23,16 +23,26 @@ body{
 nav-sidebar{
   display: contents;
 }
-
-.menu-opc {
+ 
+main {
   flex: 1;
   padding: 1rem;
+  margin-inline: auto;
+}
+
+.menu-opc {
+  background-color: var(--color-darkblue);
 
   h1 {
     color: var(--color-verdoso);
     font-size: 3.5rem;
     text-align: center;
     font-weight: 900;
+
+    @media ( width < 768px ){
+      font-size: 3rem;
+      text-wrap: balance;
+    }
   }
 
   h2 {
@@ -46,11 +56,13 @@ nav-sidebar{
     margin-inline: auto;
     text-wrap: nowrap;
 
-    &::after, &::before {
-      content: '';
-      height: 0px;
-      flex-grow: 1;
-      border: 1px solid var(--color-naranja);
+    @media( width > 764px){
+      &::after, &::before {
+        content: '';
+        height: 0px;
+        flex-grow: 1;
+        border: 1px solid var(--color-naranja);
+      }
     }
   }
 
@@ -61,6 +73,11 @@ nav-sidebar{
     max-width: 80%;
     margin-inline: auto;
     margin-block: 3%;
+
+    @media (width < 764px){
+      grid-template-columns: repeat(3, 1fr);
+      margin-block: 10%;
+    }
   }
 
   .menu-card {
