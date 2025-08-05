@@ -1,6 +1,7 @@
 import "./components/NavSidebar/NavSidebar.js";
+import "./components/MenuMovil/ButtonMenuMovil.js"
 
-document.addEventListener( 'DOMContentLoaded', () => {
+/* document.addEventListener( 'DOMContentLoaded', () => {
   const menuMovil = document.querySelector('#btn-menu');
   const sidebarMenu = document.querySelector('#sidebar');
 
@@ -8,4 +9,4 @@ document.addEventListener( 'DOMContentLoaded', () => {
     sidebarMenu.style.display= 'contents';
     sidebarMenu.style.zIndex= 90 
   } )
-})
+}) */

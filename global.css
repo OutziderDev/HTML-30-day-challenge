@@ -28,8 +28,8 @@ nav-sidebar {
   }
 }
 
-.section-menu{
-  display: none;
+/* .section-menu{
+  display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
@@ -63,7 +63,7 @@ nav-sidebar {
   @media ( width <= 768px) {
     display: flex;
   }
-}
+} */
 
 main {
   flex: 1;
