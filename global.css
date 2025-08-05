@@ -20,7 +20,7 @@ body{
   font-family: monospace;
 }
 
-nav-sidebar{
+nav-sidebar {
   display: contents;
 
   @media ( width <= 768px) {
