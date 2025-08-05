@@ -28,52 +28,20 @@ nav-sidebar {
   }
 }
 
-/* .section-menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
-  font-size: 1.3rem;
-  padding: 0.7rem;
-  border: thick solid var(--color-decorador);
-  opacity: 0.8;
-  margin-block: 5%;
-  border-radius: 0.5rem;
-
-  & > button {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    padding: 0.2rem;
-    border-radius: 0.3rem;
- 
-    & > svg {
-      stroke: var(--color-naranja);
-    }
-
-    &:hover {
-       background-color: var(--color-decorador);
-    }
-  }
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media ( width <= 768px) {
-    display: flex;
-  }
-} */
+next-challenge-card {
+  display: contents;
+}
 
 main {
   flex: 1;
   padding: 1rem;
   margin-inline: auto;
+  min-height: 100dvh;
 }
 
 .menu-opc {
   background-color: var(--color-darkblue);
-
+  
   h1 {
     color: var(--color-verdoso);
     font-size: 3.5rem;
