@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML 30-day Challenge</title>
   <link rel="stylesheet" href="global.css" >
-  <script src="./components/NavSidebar.js" type="module" ></script>
+  <script type="module" src="/index.js"></script>
+  <!-- <script type="module" src="../../components/NavSidebar/NavSidebar.js"></script> -->
   <!-- <link rel="preload" href="./assets/images/perro programador.webp" as="image" type="image/webp" crossorigin="anonymous"> -->
 </head>
 <body>
@@ -32,7 +33,7 @@
       for (let index = 1; index <= 30; index++) {
         const card = document.createElement('a')
         card.classList.add('menu-card')
-        card.href= `/Retos/${index}`
+        card.href= `/Retos/${index}/index.html`
         const text = document.createElement('span')
         text.classList.add('text')
         const number = document.createElement('span')

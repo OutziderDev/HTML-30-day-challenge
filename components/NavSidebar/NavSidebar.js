@@ -1,0 +1,57 @@
+import styles from "../NavSidebar/NavSidebar.css" with { type: "css" };
+
+class Sidebar extends HTMLElement {
+  constructor() {
+    super();
+
+    this.attachShadow({mode: "open"});
+    this.shadowRoot.adoptedStyleSheets.push(styles);
+    let navLinkHTML = '';
+
+    for (let index = 1; index <= 30; index++) {
+      navLinkHTML += `<a href="/Retos/${index}/index.html" class="active" >
+            <span>Día ${index}</span>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-folder-symlink"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21v-4a3 3 0 0 1 3 -3h5" /><path d="M8 17l3 -3l-3 -3" /><path d="M3 11v-5a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8" /></svg>
+          </a>`
+    }
+    
+    this.shadowRoot.innerHTML = /* html*/ `
+      <aside class="sidebar">
+        <header>
+          <img src="/assets/images/perro programador.webp" alt="Imagen de usuario" title="Foto de Perfíl" fetchpriority="high" >
+          <span>@OutziderDev</span>
+        </header>
+        <nav>
+          <a href="/" class="active">
+            <span><strong>Inicio</strong></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          </a>
+          ${navLinkHTML}
+        </nav>
+        <footer>
+          <a href="https://github.com/OutziderDev/">
+            <img src="/assets/icons/github.svg" loading="lazy" decoding="async" alt="Acceso a Github">
+          </a>
+          <a href="https://discord.com/users/outzider2776">
+            <img src="/assets/icons/discord.svg" loading="lazy" decoding="async" alt="Acceso a discord">
+          </a>
+        </footer> 
+      </aside>
+    `;
+  }
+
+  connectedCallback(){
+    const currentPath = window.location.pathname;
+    const links = this.shadowRoot.querySelectorAll('nav a')
+
+    links.forEach( link => {
+      link.classList.remove('active');
+
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active')
+      }
+    })
+  }
+}
+
+customElements.define('nav-sidebar', Sidebar)
