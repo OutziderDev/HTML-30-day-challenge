@@ -1,3 +1,55 @@
-main {
-   
+.container {
+  max-width: 70%;
+  margin-inline: auto;
+  padding-bottom: 8rem;
+
+  h1 {
+    color: var(--color-verdoso);
+    font-size: 2rem;
+    text-wrap: pretty;
+    text-align: center;
+    margin-block: 1.5rem;
+  }
+
+  p {
+    color: white;
+    margin-block: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.8;
+
+    & > span {
+      color: var(--color-verdoso);
+    }
+
+    & > strong {
+      color: var(--color-naranja);
+    }
+
+    &:hover {
+      opacity: 1;
+      
+    }
+  }
+
+  & img {
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
+    margin-inline:auto ;
+    border-radius: 0.5rem;
+    transform: skewY(4deg);
+  }
+
+  @media (width <= 768px) {
+    max-width: 85%;
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p{
+      font-size: 0.8rem;
+    }
+  }
 }
