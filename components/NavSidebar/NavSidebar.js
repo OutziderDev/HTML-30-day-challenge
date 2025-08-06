@@ -18,7 +18,7 @@ class Sidebar extends HTMLElement {
     this.shadowRoot.innerHTML = /* html*/ `
       <aside class="sidebar">
         <header>
-          <img src="/assets/images/perro programador.webp" alt="Imagen de usuario" title="Foto de Perfíl" fetchpriority="high" >
+          <img src="/assets/images/perro-programador.webp" alt="Imagen de usuario" title="Foto de Perfíl" fetchpriority="high" >
           <span>@OutziderDev</span>
         </header>
         <nav>

@@ -1,0 +1,30 @@
+section {
+  max-width: 70%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h1 {
+    color: var(--color-naranja);
+    text-align: center;
+  }
+
+  p {
+    color: var(--color-verdoso);
+    font-size: 1.2rem;
+  }
+
+  & strong {
+    color: var(--color-naranja);
+  }
+
+  @media ( width <= 768px) {
+    max-width: 80%;
+
+    p {
+      font-size: 1rem;
+      text-wrap: balance;
+    }
+  }
+}

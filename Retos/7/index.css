@@ -1,0 +1,51 @@
+section {
+  max-width: 70%;
+  margin-inline: auto ;
+  padding-bottom: 12%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & > h1 {
+    color: var(--color-naranja);
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  & > p {
+    color: white;
+    font-size: 1.1em;
+  }
+
+  & > picture {
+    margin-inline: auto;
+    
+    & > img {
+      width: 100%;
+      height: 400px;
+      transition: transform 0.5s ease;
+      
+      &:hover {
+        transform: scale(1.1) skew(-3deg);
+      }
+    }
+    
+  }
+
+  strong {
+    color: var(--color-verdoso);
+    font-weight: bold;
+  }
+
+  .lore{
+    color: var(--color-verdoso);
+  }
+
+  @media ( width <= 768px ){
+    max-width: 90%;
+    margin-bottom: 25%;
+    & > h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

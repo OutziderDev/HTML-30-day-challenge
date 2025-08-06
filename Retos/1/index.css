@@ -7,6 +7,9 @@ main {
     font-size: 1.2rem;
     color: var(--color-verdoso);
     text-shadow: 20px 30px 30px var(--color-verdoso);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
     & > span {
       font-weight: bold;
@@ -15,7 +18,7 @@ main {
       text-shadow: 40px 40px 30px var(--color-naranja);
     }
 
-    & > strong {
+    &  strong {
       color: var(--color-naranja);
       text-shadow: 40px 40px 30px var(--color-naranja);
     }

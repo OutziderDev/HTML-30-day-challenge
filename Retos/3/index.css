@@ -6,7 +6,7 @@ html{
   max-width: 70%;
   margin-top: 5%;
   margin-inline: auto;
-  padding-bottom: 25%;
+  padding-bottom: 15%;
 
   & > article {
     width: 100%;
@@ -112,6 +112,7 @@ html{
 
   @media (width <= 768px){
     max-width: 90%;
+    padding-bottom: 25%;
 
     & > article{
 

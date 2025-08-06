@@ -1,0 +1,55 @@
+.archivos-clasificados {
+  max-width: 80%;
+  margin-inline:auto ;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & > h1 {
+    color: var(--color-verdoso);
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: pretty;
+  }
+
+  & > p {
+    color: white;
+    font-size: 1rem; 
+  }
+
+  & > details {
+    color: var(--color-verdoso);
+    border: thick solid var(--color-decorador);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+     
+
+    & > summary {
+      color: var(--color-naranja);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    &::details-content {
+      font-size: 1rem;
+      margin-block: 0.5rem;
+    }
+  }
+
+  & > footer {
+    color: aliceblue;
+  }
+
+  strong {
+    color: var(--color-naranja);
+  }
+
+  @media ( width <= 768px){
+    max-width: 90%;
+    margin-bottom: 25%;
+
+    & > h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
