@@ -60,7 +60,7 @@
 
     .active{
       color: var(--color-verdoso);
-      background-color: var(--color-light-darkblue);
+      background-color: var(--color-decorador);
 
       & > svg {
         stroke: var(--color-naranja);

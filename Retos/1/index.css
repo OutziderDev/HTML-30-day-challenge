@@ -1,7 +1,4 @@
 main {
-  width: 100%;
-  display: flex; 
-  flex-direction: column;
   
   & > .info {
     max-width: 50%;
@@ -28,44 +25,4 @@ main {
       font-size: 1rem;
     }
   }
-
-  /* & > .card-next {
-    margin-top: auto;
-    margin-bottom: 3rem;
-    margin-inline: auto;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border: thin solid var(--color-verdoso);
-    padding: 1rem;
-    text-decoration: none;
-
-    & > .data-card {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      font-size: 1.2rem;
-
-      & > .card-title {
-        color: var(--color-naranja);
-      }
-
-      & > .card-desc {
-        color: var(--color-verdoso);
-        font-weight: bold;
-      }
-    }
-
-    & > svg {
-      width: 30px;
-      height: 30px;
-      stroke-width: 3;
-      stroke: var(--color-verdoso);
-    }
-
-    @media ( width <= 768px){
-      margin-top: 3rem; 
-      margin-bottom: 0 
-    }
-  } */
 }

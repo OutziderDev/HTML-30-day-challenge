@@ -37,6 +37,8 @@ main {
   padding: 1rem;
   margin-inline: auto;
   min-height: 100dvh;
+  width: 100%;
+  position: relative;
 }
 
 .menu-opc {
