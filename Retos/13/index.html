@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto: Día 13</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/global.css">
+  <script type="module" src="/index.js"></script>
+  
+</head>
+<body>
+  <nav-sidebar id="sidebar"></nav-sidebar>
+  <main>
+    <nav-button-movil></nav-button-movil>
+    <section>
+      <h1> Entradas para  "La Verdad detrás de Tailwind"</h1>
+      <p>
+        Después de años de censura por parte del Pato Supremo y sus fieles utility-devs, por fin se liberó el documental secreto <strong>"La Verdad detrás de Tailwind"</strong>.
+      </p>
+      <p>
+        <strong>Solo hay 100 entradas disponibles</strong> para esta función única y clandestina, proyectada en los túneles debajo de la vieja sede de FreeCodeCamp.
+        <br>
+        <strong>¡Apresúrate!</strong> El Manz ya mandó a sus moderadores a sabotear el proyector.
+      </p>
+      
+      <div>
+        <label for="meter">Entradas vendidas:</label>
+        <meter min="0" value="64" max="100" name="meter" id="meter"></meter>
+        <span class="data-meter">64/100</span>
+      </div>
+
+      <button id="comprar">Comprar Entrada</button>
+       
+    </section>
+    <next-challenge-card></next-challenge-card>
+
+    <script>
+      const btn = document.querySelector('#comprar');
+      const meter = document.querySelector('#meter')
+      const text = document.querySelector('.data-meter');
+      btn.addEventListener('click', () => {
+        meter.value += 1; 
+        text.textContent = `${meter.value} /100`;
+      })
+    </script>
+  </main>
+</body>
+</html>

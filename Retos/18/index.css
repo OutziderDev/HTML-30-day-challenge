@@ -1,0 +1,48 @@
+article {
+  max-width: 70%;
+  margin-inline: auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding-bottom: 15%;
+
+  & header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    & > h1 {
+      color: var(--color-naranja);
+      font-size: 2rem;
+      text-align: center;
+      text-wrap: balance;
+    }
+  }
+  mark{
+    background-color: var(--color-naranja);
+  }
+  .cuerpo{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &  p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.4rem;
+     
+  }
+
+  strong{
+    color: var(--color-verdoso);
+  }
+   
+
+  @media (width <= 768px){
+    max-width: 90%;
+    padding-bottom: 30%;
+ 
+  }
+}

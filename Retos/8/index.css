@@ -1,0 +1,48 @@
+
+section {
+  max-width: 70%;
+  margin-inline: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h1{
+    color: var(--color-verdoso);
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0.9;
+    line-height: 1.5rem;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  mark {
+    background-color: var(--color-verdoso);
+    font-style: italic;
+    padding: 0.05rem;
+  }
+
+  .naranja {
+    background: var(--color-naranja);
+  }
+
+  @media ( width <= 768px){
+    max-width: 90%;
+    padding-bottom: 25%;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+}

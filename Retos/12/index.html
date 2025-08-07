@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto: Día 12</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/global.css">
+  <script type="module" src="/index.js"></script>
+  
+</head>
+<body>
+  <nav-sidebar id="sidebar"></nav-sidebar>
+  <main>
+    <nav-button-movil></nav-button-movil>
+    <section>
+      <h1>Termómetro de Herejía Utility-First</h1>
+      <p>
+        En la <strong>logia de Manz</strong>, sus seguidores no solo crean fórmulas absurdas y expulsan a los traidores que usan <code><strong>"npm add tailwind"</strong></code>,
+        también desarrollan <em>instrumentos de tortura moral</em> como esta escala. Úsala con responsabilidad para medir
+        tu nivel de resistencia a <strong>Tailwind</strong>, y recuerda: cuanto mayor el número... menos alma te queda.
+      </p>
+      <label for="tailwindSlider">Nivel de aguante a Tailwind:</label>
+      <input type="range" id="tailwindSlider" min="1" max="50" value="1" />
+      <p>Resultado: <span id="tailwindValor">1</span>/50</p>
+      <p id="fraseTailwind">Aún escribes CSS con amor. Eres salvable.</p>
+    </section>
+    <next-challenge-card></next-challenge-card>
+  </main>
+
+  <script>
+    const slider = document.querySelector('#tailwindSlider');
+    const result = document.querySelector('#tailwindValor');
+    const frase = document.querySelector('#fraseTailwind');
+
+    slider.addEventListener('input', () => {
+      const v  = parseInt(slider.value)
+      result.textContent = v 
+
+       if (v <= 10) {
+        frase.textContent = "Aún escribes CSS con amor. Eres salvable.";
+      } else if (v <= 20) {
+        frase.textContent = "Usas Tailwind... pero ocultas el panel de clases por vergüenza.";
+      } else if (v <= 30) {
+        frase.textContent = "Has intentado justificar el uso de 'p-6' en entrevistas.";
+      } else if (v <= 40) {
+        frase.textContent = "Eliminaste tu archivo CSS porque 'ya no hacía falta'.";
+      } else {
+        frase.textContent = "Citas a Adam Wathan en reuniones. Has sido excomulgado por la logia.";
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+section {
+  max-width: 70%;
+  margin-inline: auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding-bottom: 15%;
+
+  & > h1 {
+    color: var(--color-naranja);
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.4rem;
+  }
+
+  label{
+    color: var(--color-naranja);
+    font-size: 1.1rem;
+  }
+
+  meter {
+    width: 100%;
+    height: 1rem;
+  }
+
+  strong{
+    color: var(--color-verdoso);
+  }
+
+  @media (width <= 768px){
+    max-width: 90%;
+    padding-bottom: 30%;
+  }
+}

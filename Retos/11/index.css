@@ -1,0 +1,55 @@
+section {
+  max-width: 70%;
+  margin-inline: auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding-bottom: 15%;
+
+  & > h1 {
+    color: var(--color-naranja);
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.4rem;
+  }
+
+  ul{
+    color: white;
+    list-style: none;
+    list-style-position: inside;
+    font-size: 1.1rem;
+
+    & > li {
+      margin-block: 0.5rem;
+      opacity: 0.85;
+
+      & > mark {
+        background-color: var(--color-naranja);
+        color: white;
+        font-weight: bold;
+        padding: 0.3rem;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  strong{
+    color: var(--color-verdoso);
+  }
+
+  @media (width <= 768px){
+    max-width: 90%;
+    padding-bottom: 25%;
+  }
+}

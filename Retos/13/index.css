@@ -1,0 +1,64 @@
+section {
+  max-width: 70%;
+  margin-inline: auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding-bottom: 15%;
+
+  & > h1 {
+    color: var(--color-naranja);
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.4rem;
+  }
+
+  label{
+    color: var(--color-naranja);
+    font-size: 1.1rem;
+  }
+
+  meter {
+    width: 100%;
+    height: 1rem;
+  }
+
+  .data-meter {
+    color: wheat;
+    opacity: 0.8;
+  }
+  
+  strong{
+    color: var(--color-verdoso);
+  }
+
+  button {
+    width: 25%;
+    margin: 0 auto;
+    border: thick solid var(--color-decorador);
+    background-color: transparent;
+    color: var(--color-verdoso);
+    font-size: 1.1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:active {
+      background-color: var(--color-decorador);
+      transform: scale(0.8);
+    }
+  }
+
+  @media (width <= 768px){
+    max-width: 90%;
+    padding-bottom: 30%;
+  }
+}

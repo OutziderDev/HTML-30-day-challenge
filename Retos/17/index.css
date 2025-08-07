@@ -1,0 +1,121 @@
+section {
+  max-width: 70%;
+  margin-inline: auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding-bottom: 15%;
+
+  & > h1 {
+    color: var(--color-naranja);
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  & > p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.4rem;
+  }
+
+  strong{
+    color: var(--color-verdoso);
+  }
+  
+  .card{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--color-light-darkblue);
+    border-radius: 0.5rem;
+    border: thin solid var(--color-decorador);
+    overflow: hidden;
+    box-sizing: border-box;
+
+    & > .card-title {
+      background-color: black;
+      color: var(--color-naranja);
+      padding: 0.5rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    & > .card-main {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      & > img {
+        width: 40%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+
+      & > .card-data{
+        width: 50%;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        color: aliceblue;
+        align-items: center;
+        justify-content: center;
+
+        & > .data {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            color: var(--color-verdoso);
+            font-size: 3rem;
+            font-weight: bold;
+
+            @media ( width <= 768px){
+              font-size: 1.5rem;
+            }
+          }
+          p{
+            letter-spacing: 0.1rem;
+            font-size: 1.05rem;
+          }
+        }
+      }
+    }
+
+    & > footer {
+      background-color: black;
+      padding: 0.5rem;
+      text-align: center;
+
+      & > a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.05rem;
+
+        &:hover {
+          color: var(--color-verdoso);
+        }
+      }
+
+    }
+  }
+
+  @media (width <= 768px){
+    max-width: 90%;
+    padding-bottom: 30%;
+
+    .card {
+      width: 95%;
+    }
+  }
+}

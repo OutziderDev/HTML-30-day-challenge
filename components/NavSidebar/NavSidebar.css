@@ -37,7 +37,7 @@
     flex-direction: column;
     gap: 0.5rem;
     overflow-y: scroll;
-    height: 450px;
+    max-height: 450px;
     scrollbar-color: var(--color-decorador) var(--color-darkblue) ;
 
     & > a {
