@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reto: Día 3</title>
+  <title>Reto: Día 20</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="/global.css">
   <script type="module" src="/index.js"></script>
@@ -16,29 +16,75 @@
     <section>
       <h1>📜 El Libro Sagrado de Quejas y Revelaciones</h1>
       <p>
-        Algunos iniciados que sobrevivieron a los <strong>Ritos de Iniciación</strong> han dejado sus mensajes desde el más allá...
+        Algunos iniciados que realizaron el <strong>Rito de Iniciación</strong> han dejado sus mensajes desde el más allá...
         Otros simplemente escribieron <strong>antes de perder la cordura</strong>. 
         Tú también puedes dejar tu legado en esta página... si es que no has sido purgado aún.
       </p>
       <article class="form-cards">
         <section class="formu">
-          <h2>Envia tus Lagrimas</h2>
-          <form action="">
+          <h2>Grita al vacío digital</h2>
+          <form action="" id="formulario">
             <div class="campo">
               <label for="nick">Nombre:</label>
-              <input type="text" name="nick" id="nick" placeholder="Ramiro">
+              <input class="inputs" type="text" name="nick" id="nick" placeholder="Ramiro" required>
             </div>
             <div class="campo">
               <label for="msg">Mensaje:</label>
-              <textarea name="msg" id="msg" placeholder="Solo quiero acostarme a llorar"></textarea>
+              <textarea class="inputs" name="msg" maxlength="75" id="msg" rows="4" placeholder="Solo quiero acostarme a llorar" required></textarea>
             </div>
-            <button>Envar</button>
+            <button>Enviar</button>
           </form>
         </section>
-        <section class="cards"></section>
+
+        <section class="cards" id="cards">
+           
+          <article class="card">
+            <h5>NullPointer</h5>
+            <p>Mi alma quedó atrapada en un bucle while(true) sin condición de salida</p>
+          </article>
+
+          <article class="card">
+            <h5>Ramiro</h5>
+            <p>Yo paso por aquí para manifestar la ronda intensa de Wordle, con los puntos.</p>
+          </article>
+
+          <article class="card">
+            <h5>log_yo</h5>
+            <p>Intenté escapar del npm install y ahora soy parte del package-lock.json.</p>
+          </article>
+
+          <article class="card">
+            <h5>BytePerdido</h5>
+            <p>Me dejaron en un bucle infinito durante el rito de las dependencias.</p>
+          </article>
+           
+        </section>
       </article>
     </section>
     <next-challenge-card></next-challenge-card>
   </main>
+
+  <script>
+    const grid = document.querySelector('#cards');
+    const form = document.querySelector('#formulario');
+    const nick = document.querySelector('#nick');
+    const msg = document.querySelector('#msg');
+
+    form.addEventListener('submit',(e) => {
+      e.preventDefault();
+      const card = document.createElement('article');
+      card.classList.add('card');
+      const user = document.createElement('h5');
+      user.textContent = nick.value;
+      const dato = document.createElement('p');
+      dato.textContent = msg.value
+      card.append(user,dato);
+
+      grid.prepend(card);
+
+      nick.value = ''
+      msg.value = ''
+    })
+  </script>
 </body>
 </html>

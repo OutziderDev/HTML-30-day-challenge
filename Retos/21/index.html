@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto: Día 21</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/global.css">
+  <script type="module" src="/index.js"></script>
+  
+</head>
+<body>
+  <nav-sidebar id="sidebar"></nav-sidebar>
+  <main>
+    <nav-button-movil></nav-button-movil>
+    <section>
+      <h1>El Registro Sagrado de la Logia</h1>
+      <p>De algún modo, alguien logró compilar el <strong>Registro Sagrado de la Logia</strong>, una lista de los productos más perseguidos y codiciados por los devotos del Manzverso. A través de los siglos binarios, estas reliquias han sido usadas, perdidas y rescatadas en diferentes ramas del repositorio sagrado. Aquí, por primera vez, pueden ser contempladas.</p>
+      <label for="registro">Hecha un vistazo al Registro Sagrado:</label>
+      <select id="registro">
+        <option disabled selected>Lista de las reliquias más prestiguiosas</option>
+        
+        <optgroup label="🧪 Artefactos del Vacío Digital">
+          <option value="Compilador">Compilador del Juicio Final</option>
+          <option value="Debugscope">Lupa de Debug Infinito</option>
+          <option value="Usb">USB del Bucle Infinito</option>
+        </optgroup>
+
+        <optgroup label="🦆 Ofertas del Supremo Pato">
+          <option value="Manzitos">Manzitos (criptocuac)</option>
+          <option value="Sombrero">Sombrero del Líder Supremo</option>
+          <option value="Cuac">Cuac Amplificado +5dB</option>
+        </optgroup>
+
+        <optgroup label="📦 Herramientas del Desarrollador Ancestral">
+          <option value="raton">Ratón Sagrado sin Scroll</option>
+          <option value="teclado">Teclado Rúnico ANSI</option>
+          <option value="monitor">Monitor 144Hz Eterno</option>
+        </optgroup>
+      </select>
+
+      <div>
+         
+        <p class="desc"> </p>
+      </div>
+
+    </section>
+    <next-challenge-card></next-challenge-card>
+  </main>
+
+  <script>
+    const seleccion = document.querySelector('#registro');
+    const item = document.querySelector('.item')
+    const desc = document.querySelector('.desc')
+
+    seleccion.addEventListener('change', () => {
+       const map = {
+        Compilador: "Un compilador tan estricto que convierte cualquier warning en un ticket existencial.",
+        Debugscope: "Aumenta la visión de bugs invisibles a simple vista. Requiere 2 de RAM y 3 de fe.",
+        Usb: "Un USB que nunca deja de girar. Contiene memes corruptos y README sin fin.",
+        Manzitos: "Moneda oficial de la logia. 1 Patomoneda equivale a 404 centavos.",
+        Sombrero: "Otorga +1 en liderazgo pero -2 en humildad. Solo puede portarlo un devoto a la vez.",
+        Cuac: "Un cuac que resuena en dimensiones paralelas. Solo úsalo en emergencias.",
+        raton: "Ratón sagrado, sin scroll pero con propósito.",
+        teclado: "Teclado rúnico con soporte para lenguajes extintos.",
+        monitor: "Muestra más FPS de los que el universo permite."
+      };
+
+      const value = seleccion.value;
+      console.log('value', value)
+      desc.textContent = map[value];
+    })
+  </script>
+</body>
+</html>
