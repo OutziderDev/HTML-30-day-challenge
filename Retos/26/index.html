@@ -13,8 +13,43 @@
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
-    
+    <section>
+      <h1>Bajo Sospecha: Frameworks Detectados..</h1>
+      <p>
+        <strong>¡Alto ahí!</strong> El Manzverso ha vibrado y detectado trazas sospechosas de Frameworks,
+        <em>clases inline</em> y <em>divitis</em> en tu navegador.  
+        Justifica tu código… o enfréntate al Consejo del Pato Supremo.
+      </p>
+      
+      <button id="auditor">Invocar Auditor</button>
+
+      <div class="preaviso">
+        <p>El Consejo del Pato Supremo fija su mirada en ti. El aire se espesa… y un susurro anuncia que Frameworks y Tailwind se ocultan entre tus códigos.</p>
+        <button id="" popovertarget="msg" popovertargetaction="toggle">Justificarse Rapidamente..</button>
+      </div>
+      
+      <div id="msg" popover>
+        <p><strong>Es tarde...</strong> <span>Estás en peligro...</span> El Pato Supremo te tiene en la mira.</p>
+        <img id="targetmsg" src="jusgador.webp" width="300" alt="La entidad que juzga tus acciones con silenciosa decepción">
+        <p>
+          <strong>
+            <small>¡Corre! Haz clic en cualquier otro lugar antes de que sea demasiado tarde.</small>
+          </strong>
+        </p>
+      </div>
+    </section>
     <next-challenge-card></next-challenge-card>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const btnAuditor = document.querySelector("#auditor");
+        const preaviso = document.querySelector('.preaviso');
+
+        btnAuditor.addEventListener('click', () => {
+          btnAuditor.style.display = "none";
+          preaviso.style.display = "flex";
+        })
+      })
+    </script>
   </main>
 </body>
 </html>

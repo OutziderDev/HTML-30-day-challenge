@@ -15,7 +15,7 @@ section {
     text-wrap: balance;
   }
 
-  & > p {
+  &  p {
     font-size: 1.1rem;
     color: white;
     line-height: 1.4rem;
@@ -24,6 +24,57 @@ section {
   strong{
     color: var(--color-verdoso);
   }
+
+  .preaviso {
+    flex-direction: column;
+    gap: 1.5rem;
+    display: none
+  }
+
+  [popover] {
+    box-sizing: border-box;
+    background-color: black;
+    text-align: center;
+    margin: auto;
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 4px 1px var(--color-verdoso);
+
+    &:hover{
+      border: thin solid var(--color-verdoso);
+    }
+
+    &::backdrop {
+      background-color: #0007;
+      backdrop-filter: blur(10px);
+    }
+
+    & > img {
+      margin-block: 1.2rem;
+    }
+
+    &  span {
+      color: var(--color-naranja);
+    }
+  }
+
+  button {
+      background-color: transparent;
+      border: thick solid var(--color-decorador);
+      color: var(--color-verdoso);
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      width: 50%;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+      font-weight: bold;
+
+      &:active {
+        transform: scale(0.9);
+        background-color: var(--color-decorador);
+      }
+    }
 
   @media (width <= 768px){
     max-width: 90%;
