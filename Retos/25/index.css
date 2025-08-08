@@ -1,5 +1,5 @@
 section {
-  max-width: 70%;
+  max-width: 80%;
   margin-inline: auto;
   margin-top: 1%;
   display: flex;
@@ -25,7 +25,36 @@ section {
     color: var(--color-verdoso);
   }
 
- 
+  .galeria {
+    width: 100%;
+    height: 45dvh;
+    overflow-y: auto;
+    display: grid;
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    scrollbar-color: var(--color-verdoso) var(--color-darkblue);
+    scrollbar-width: thin;
+    
+    & > a {  
+      width: 100%;
+      grid-row-end: span 2;  
+    }
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+    }
+    @media ( width <= 768px ){
+      gap: 0rem;
+
+      & > a {  
+      width: 100%;
+      grid-row-end: span 0;  
+    }
+    }
+  }
+
   @media (width <= 768px){
     max-width: 90%;
     padding-bottom: 30%;
