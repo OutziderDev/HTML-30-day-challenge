@@ -15,7 +15,7 @@
 body{
   background-color: var(--color-darkblue);
   width: 100%;
-  min-height: 100dvh;
+  height: 100%;
   display: flex;
   font-family: monospace;
   position: relative;

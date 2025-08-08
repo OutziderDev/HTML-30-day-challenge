@@ -25,7 +25,51 @@ section {
     color: var(--color-verdoso);
   }
 
- 
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    button {
+      background-color: transparent;
+      border: thick solid var(--color-decorador);
+      color: var(--color-verdoso);
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      width: 50%;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+      font-weight: bold;
+
+      &:active {
+        transform: scale(0.9);
+        background-color: var(--color-decorador);
+      }
+    }
+
+    input[list="artefactos"]{
+      width: 100%;
+      padding: 0.5rem;
+      background-color: var(--color-darkblue);
+      border: thick solid var(--color-decorador);
+      color: var(--color-naranja);
+      font-size: 1.1rem;
+      box-shadow: 0 0 5px 1px var(--color-verdoso);
+
+      &::placeholder{
+        color: var(--color-naranja);
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: thin solid var(--color-verdoso);
+      }
+    }
+  }
+   
+
   @media (width <= 768px){
     max-width: 90%;
     padding-bottom: 30%;

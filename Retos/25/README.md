@@ -1,4 +1,4 @@
-# Reto: Día 22
+# Reto: Día 25
 
 ## Objetivo:
-En la lista anterior, permite al usuario introducir opciones personalizadas (no sólo las de la lista) y filtrar las opciones existentes.
+Crea una galería de fotos. Asegúrate que no se cargan si están fuera de la región visible del navegador.

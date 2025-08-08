@@ -13,8 +13,40 @@
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
-    
+    <section class="iniciacion">
+      <h1>La Ventana al Manzverso</h1>
+      <p>
+        Según rumores, también se puede <strong>acceder a la Logia de manera directa</strong>, enviando una solicitud a todas las entidades del <strong>Manzverso</strong>, quienes evaluarán tus aptitudes y tu fidelidad inquebrantable a <strong>HTML y CSS puro</strong>. El Códice prohíbe símbolos profanos como guiones, tildes o signos extraños; solo se permiten letras y números. Cualquier otro carácter será considerado una blasfemia digital y despertará al Validador Arcano.
+      </p>
+      <form id="registroForm">
+        <label for="username">Nombre Sagrado:</label>
+        <input type="text" id="username" placeholder="Devoto404" required> <!-- pattern="[a-zA-Z0-9]" -->
+        <button type="submit">Invocar Validación</button>
+      </form>
+
+      <p id="resultado"></p>
+    </section>
     <next-challenge-card></next-challenge-card>
   </main>
+  <script>
+    const form = document.getElementById('registroForm');
+    const username = document.getElementById('username');
+    const resultado = document.getElementById('resultado');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nombre = username.value.trim();
+
+      const valido = /^[a-zA-Z0-9]+$/.test(nombre);
+
+      if (valido) {
+        resultado.textContent = ` El nombre "${nombre}" ha sido aceptado por el Códice. Serás contactado mediante una subscripción a Manz .`;
+        resultado.style.color = "var(--color-verdoso)";
+      } else {
+        resultado.textContent = `❌ "${nombre}" contiene símbolos prohibidos por el Códice. Has despertado al Linter Celestial.`;
+        resultado.style.color = "var(--color-naranja)";
+      }
+    });
+  </script>
 </body>
 </html>

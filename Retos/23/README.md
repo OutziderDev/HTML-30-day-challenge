@@ -1,4 +1,4 @@
-# Reto: Día 22
+# Reto: Día 23
 
 ## Objetivo:
-En la lista anterior, permite al usuario introducir opciones personalizadas (no sólo las de la lista) y filtrar las opciones existentes.
+Crea un formulario que te permita elegir un día entre el 15/nov y el 15/dic.

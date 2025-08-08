@@ -13,8 +13,46 @@
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
-    
+    <section>
+      <h1>Los Artefacto Sagrados para la Logia </h1>
+      <p>
+        Tras la expulsión de ciertos <strong>herejes por invocar a Tailwind</strong> y dejar que sus clases contaminasen sus vidas, se descubrieron <strong>fragmentos de un antiguo formulario utilizado por miembros</strong> de la logia para proponer herramientas místicas. Contra todo pronóstico, el formulario ha sido reconstruido y ahora puedes interactuar con él.
+      </p>
+      <p>
+        Escribe el nombre de una herramienta mística digna del Pato Supremo. Si no existe ya en los registros sagrados, será enviada al Consejo para su evaluación dimensional.
+      </p>
+      <form action="" id="item-form">
+        <input list="artefactos" type="text" id="inputArtefacto" required placeholder="Ej: IDE que no te juzga" />
+        <datalist id="artefactos">
+          <option class="option-css" value="Debugger Espiritual">
+          <option class="option-css" value="Router del Karma Digital">
+          <option class="option-css" value="Terminal Zsh que responde con sarcasmo">
+          <option class="option-css" value="Café Binario Infinito">
+          <option class="option-css" value="Toalla para errores 404">
+        </datalist>
+        <button onclick="invocarArtefacto()">Proponer</button>
+      </form>
+
+      <p id="resultado"></p>
+    </section>
     <next-challenge-card></next-challenge-card>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('#item-form')
+        const resp = document.querySelector('#resultado')
+        const dato = document.querySelector('#inputArtefacto')
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          resp.textContent = 'El mensaje ha sido enviado al Consejo del Pato Supremo. Prepárate para consecuencias impredecibles, por parte de Manz.'
+          setTimeout(() => {
+            resp.textContent = ''
+            dato.textContent = ''
+          }, 5000);
+        })
+      })
+    </script>
   </main>
 </body>
 </html>

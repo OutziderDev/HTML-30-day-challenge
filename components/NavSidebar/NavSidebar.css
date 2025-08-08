@@ -37,7 +37,7 @@
     flex-direction: column;
     gap: 0.5rem;
     overflow-y: scroll;
-    max-height: 450px;
+    max-height: 500px;
     scrollbar-color: var(--color-decorador) var(--color-darkblue) ;
 
     & > a {
@@ -65,7 +65,8 @@
       & > svg {
         stroke: var(--color-naranja);
       }
-    }   
+    }  
+     
   }
 
   & footer {

@@ -1,4 +1,4 @@
-# Reto: Día 22
+# Reto: Día 24
 
 ## Objetivo:
-En la lista anterior, permite al usuario introducir opciones personalizadas (no sólo las de la lista) y filtrar las opciones existentes.
+Crea un formulario de registro que valide si el username escrito es válido (sólo letras y números) o no.

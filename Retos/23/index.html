@@ -13,8 +13,37 @@
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
-    
+    <section >
+      <h1>El Día de la Purga del Código</h1>
+      <p>Entre el 15 de noviembre y el 15 de diciembre, se celebra el temido <strong>**Día de la Purga del Código**</strong>. Todos los devotos deben presentarse para someter su repositorio a una auditoría espiritual.</p>
+      <p>La Logia de Manz revisará si has invocado clases sospechosas como <strong>bg-gradient-to-r</strong> o <strong>flex justify-center</strong>. Si el Pato Supremo detecta rastros de Tailwind, serás enviado al limbo de los frameworks.</p>
+
+      <form id="formRito">
+        <label for="fecha">Elige tu día del juicio:</label>
+        <input type="date" id="fecha" name="fecha" min="1666-11-15" max="1666-12-15" required>
+        <button type="submit">Solicitar Audiencia</button>
+      </form>
+
+      <p id="respuestaRito"></p>
+    </section>
     <next-challenge-card></next-challenge-card>
+
+    <script>
+      const formRito = document.getElementById('formRito');
+      const respuesta = document.getElementById('respuestaRito');
+
+      formRito.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fecha = document.getElementById('fecha').value;
+        respuesta.textContent = `🔥 Tu inspección ritual ha sido agendada para el ${fecha}. 
+          Recuerda eliminar cualquier clase sospechosa de tu GitHub. 
+          El Consejo del Pato Supremo no muestra misericordia.`;
+
+        setTimeout(() => {
+          respuesta.textContent = '';
+        }, 6000);
+      })
+    </script>
   </main>
 </body>
 </html>
