@@ -1,4 +1,4 @@
-# Reto: Día 22
+# Reto: Día 27
 
 ## Objetivo:
-En la lista anterior, permite al usuario introducir opciones personalizadas (no sólo las de la lista) y filtrar las opciones existentes.
+Crea una serie de etiquetas que permitan mostrar como miniatura una imagen en redes sociales.
