@@ -21,7 +21,7 @@ section {
     line-height: 1.4rem;
   }
 
-  strong{
+  strong {
     color: var(--color-verdoso);
   }
 
@@ -66,7 +66,7 @@ section {
       padding: 0.5rem;
       width: 50%;
       margin: 0 auto;
-      cursor: pointer;
+      cursor: crosshair;
       transition: transform 0.1s ease;
       font-weight: bold;
 
