@@ -13,8 +13,50 @@
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
-    
+    <section>
+      <h1>La Proeza ante el Manzverso</h1>
+      <p>
+        Los nuevos adeptos de la Logia pueden intentar la legendaria <strong>Proeza ante el Manzverso</strong>: 
+        escribir un fragmento de <em>CSS puro y avanzado</em> que impresione al Consejo. 
+        Si tu código es digno, serás ascendido a nivel <strong>VIP</strong>, 
+        casi a la altura de los moderadores, y <strong>@maxi83c</strong> jamás te baneará... pase lo que pase.
+      </p>
+      <p>
+        Sin embargo, rumores cuentan que aquellos con hábitos de <em>Tailwind</em> o 
+        <em>componentes prefabricados</em> son descubiertos en el acto... intentalo...
+      </p>
+      <textarea id="codigo-css" class="input" rows="6" placeholder="Escribe aquí tu CSS artesanal... &#10;&#10;Body { &#10; color: ...&#10;}"></textarea>
+       
+      <dialog id="detencion">
+        <h3>⚠️ Proeza Interrumpida</h3>
+        <p>
+          ¡Alto ahí! Soy el <strong>Guardián del Hypertexto</strong>.  
+          He detectado patrones inquietantes en tu forma de teclear…  
+          Tus dedos parecen adiestrados para invocar clases de <em>Tailwind</em> 👀 y  
+          atajos de framework sin piedad.  
+        </p>
+        <p>
+          <strong>
+            Por tu propio bien (y el de la semántica), se te niega continuar.
+          </strong>
+        </p>
+        <img src="guardian.webp" alt="El Pato Supremo, observando con silenciosa decepción" width="250">
+        <form method="dialog">
+          <button>Cerrar y reflexionar</button>
+        </form>
+      </dialog>
+    </section>
     <next-challenge-card></next-challenge-card>
+
+    <script>
+      const textarea = document.querySelector('#codigo-css')
+      textarea.addEventListener('input', function () {
+        if ( textarea.value.length >= 10 ){
+          const dialog = document.querySelector('#detencion')
+          dialog.showModal();
+        }
+      })
+     </script>
   </main>
 </body>
 </html>

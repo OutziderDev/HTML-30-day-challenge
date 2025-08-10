@@ -25,10 +25,86 @@ section {
     color: var(--color-verdoso);
   }
 
- 
+  button {
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    border: thick solid var(--color-decorador);
+    color: var(--color-verdoso);
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    font-weight: bold;
+
+    &:active {
+      transform: scale(0.9);
+      background-color: var(--color-decorador);
+    }
+  }
+
+  .input{
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border: 0;
+    outline: none;
+    box-shadow: 0.2px 0.2px 0.2px 0.2px var(--color-naranja);
+    font-size: 1.03rem;
+    background-color: var(--color-light-darkblue);
+    color: white;
+
+    &:focus{
+      box-shadow: 1px 1px 1.5px 1px var(--color-naranja);
+    }
+  }
+
+  dialog {
+    background-color: var(--color-light-darkblue);
+    padding: 1rem;
+    flex-direction: column;
+    margin: auto;
+    border: thick groove var(--color-naranja);
+    border-radius: 1rem;
+    max-width: 40%;
+
+    &::backdrop {
+      background-color: #0005;
+      backdrop-filter: blur(10px);
+    }
+    
+    & > h3 {
+      color: white;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    & > p {
+      color: white;
+      font-size: 1.2em; 
+      margin-block: 1rem;
+    }
+
+    & > img {
+      width: 60%;
+      object-fit: cover;
+      display: block;
+      margin-block: 1rem;
+      margin-inline: auto;
+    }
+
+    &  span {
+      color: var(--color-naranja);
+    }
+  }
+
   @media (width <= 768px){
     max-width: 90%;
     padding-bottom: 30%;
 
+    dialog {
+      max-width: 90%;
+    }
   }
 }

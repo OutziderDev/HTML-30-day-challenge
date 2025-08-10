@@ -59,22 +59,22 @@ section {
   }
 
   button {
-      background-color: transparent;
-      border: thick solid var(--color-decorador);
-      color: var(--color-verdoso);
-      font-size: 1.1rem;
-      padding: 0.5rem;
-      width: 50%;
-      margin: 0 auto;
-      cursor: crosshair;
-      transition: transform 0.1s ease;
-      font-weight: bold;
+    background-color: transparent;
+    border: thick solid var(--color-decorador);
+    color: var(--color-verdoso);
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    width: 50%;
+    margin: 0 auto;
+    cursor: crosshair;
+    transition: transform 0.1s ease;
+    font-weight: bold;
 
-      &:active {
-        transform: scale(0.9);
-        background-color: var(--color-decorador);
-      }
+    &:active {
+      transform: scale(0.9);
+      background-color: var(--color-decorador);
     }
+  }
 
   @media (width <= 768px){
     max-width: 90%;

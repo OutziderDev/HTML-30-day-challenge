@@ -1,4 +1,4 @@
-# Reto: Día 22
+# Reto: Día 28
 
 ## Objetivo:
-En la lista anterior, permite al usuario introducir opciones personalizadas (no sólo las de la lista) y filtrar las opciones existentes.
+Crea una ventana modal que bloquee la interación con otros botones. Requiere un poco de Javascript.
