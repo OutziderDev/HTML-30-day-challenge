@@ -41,9 +41,13 @@
   &:hover{
     background-color: var(--color-verdoso);
 
-    & .card-title, .card-desc {
-    color: var(--color-darkblue);
+    & .card-title {
+       color: var(--color-darkblue);
+      font-weight: bold;
+    }
 
+    .card-desc {
+      color: var(--color-darkblue);
     }
     
     & > svg {
