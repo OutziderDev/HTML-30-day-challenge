@@ -39,10 +39,7 @@
         </optgroup>
       </select>
 
-      <div>
-         
-        <p class="desc"> </p>
-      </div>
+      <p class="desc"></p>
 
     </section>
     <next-challenge-card></next-challenge-card>
@@ -50,7 +47,6 @@
 
   <script>
     const seleccion = document.querySelector('#registro');
-    const item = document.querySelector('.item')
     const desc = document.querySelector('.desc')
 
     seleccion.addEventListener('change', () => {
@@ -66,9 +62,7 @@
         monitor: "Monitor CRT que muestra bugs del futuro. Emitido con olor a ozono y arrepentimiento que uestra más FPS de los que el universo permite."
       };
 
-      const value = seleccion.value;
-      console.log('value', value)
-      desc.textContent = map[value];
+      desc.textContent = map[seleccion.value];
     })
   </script>
 </body>

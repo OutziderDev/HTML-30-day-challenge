@@ -22,6 +22,7 @@
     border: thick solid var(--color-decorador);
     padding: 0.5rem;
     border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
      
 
     & > summary {

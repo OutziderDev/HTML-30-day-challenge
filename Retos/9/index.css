@@ -22,14 +22,20 @@ section{
 
   div {
     width: 100%;
-    background-image: url("pergamino.webp");
+    /* background-image: url("pergamino.webp");
     background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    background-repeat: no-repeat; */
+     border: 10px solid rgb(187, 105, 105);
+    border-image-source: url(pergamino.webp);
+    border-image-width: 350px;
+    border-image-slice: 150;
+    border-image-outset: 10px;
+   }
 
   ol{
     color: var(--color-darkblue);
+    padding: 0.5rem;
+    background: linear-gradient(90deg, rgb(247, 214, 152),#f3e3ce );
     margin-block: 20%;
     max-width: 50%;
     font-weight: bold;
@@ -60,11 +66,15 @@ section{
     }
 
     div {
-      height: 100%;
+      border: 10px solid rgb(187, 105, 105);
+      border-image-source: url(pergamino.webp);
+      border-image-width: 50px;
+      border-image-slice: 115;
+      border-image-outset: 0px;
     }
 
     ol {
-      
+       max-width: 80%;
       margin-block: 100%;
     }
   }

@@ -15,7 +15,8 @@
     color: white;
     margin-block: 1rem;
     font-size: 1.1rem;
-    opacity: 0.8;
+    opacity: 0.9;
+     
 
     & > span {
       color: var(--color-verdoso);
@@ -24,11 +25,7 @@
     & > strong {
       color: var(--color-naranja);
     }
-
-    &:hover {
-      opacity: 1;
-      
-    }
+ 
   }
 
   & img {
@@ -50,6 +47,10 @@
 
     p{
       font-size: 0.8rem;
+    }
+
+    & img {
+      width: 50%;
     }
   }
 }

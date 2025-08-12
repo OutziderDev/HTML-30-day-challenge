@@ -93,7 +93,7 @@ section {
     }
 
     & > footer {
-      background-color: black;
+      background-color: var(--color-decorador);
       padding: 0.5rem;
       text-align: center;
 

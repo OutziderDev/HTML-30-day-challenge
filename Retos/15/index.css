@@ -28,6 +28,7 @@ section {
   video{
     width: 30%;
     margin: 0 auto;
+    transition: all 0.5s ease;
   }
 
   @media (width <= 768px){
