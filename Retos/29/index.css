@@ -1,11 +1,10 @@
-section {
+.sect {
   max-width: 70%;
   margin-inline: auto;
   margin-top: 1%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
   padding-bottom: 15%;
 
   & > h1 {
@@ -19,16 +18,98 @@ section {
     font-size: 1.1rem;
     color: white;
     line-height: 1.4rem;
+
+    & > strong{
+      color: var(--color-verdoso);
+    }
   }
 
-  strong{
-    color: var(--color-verdoso);
-  }
 
- 
   @media (width <= 768px){
     max-width: 90%;
     padding-bottom: 30%;
 
+    & > p {
+      font-size: 1rem;
+    }
+  }
+}
+
+#tabs {
+  display: flex;
+  flex-direction: row;
+
+  & > button {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-naranja);
+    background-color: var(--color-light-darkblue);
+    border: 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-wrap: balance;
+    padding-block: 1rem;
+
+    &:hover {
+      background-color: var(--color-decorador);
+      
+    }
+  }
+
+  & > .active {
+    background-color: var(--color-decorador);
+    border-bottom: thick solid var(--color-verdoso);
+  }
+
+  @media (width <= 768px){
+    flex-direction: column;
+  }
+
+}
+
+#tabs-content {
+ 
+  & > article {
+    background-color: var(--color-decorador);
+    border: thin solid var(--color-verdoso);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    animation: fade-left-in 0.3s ease-in-out ;
+    color: white;
+    color: var(--color-verdoso);
+
+    & > a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.3rem;
+      margin-block: 1rem;
+    }
+
+    & > em {
+      color: white !important;
+    }
+  }
+
+  @media ( width <= 768px){
+    & > article {
+      & > a {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@keyframes fade-left-in {
+  from { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
