@@ -19,8 +19,76 @@
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
-    
+    <section>
+      <h1>¿Llegaste hasta aquí? 😲</h1>
+      <p>
+        ¡Wow! Estoy realmente impresionado por tu paciencia y persistencia.  
+        Gracias por tomarte el tiempo de ver cada uno de estos retos.  
+        Espero que te hayas divertido, que te haya sacado al menos una sonrisa  
+        y que hayas aprendido algo nuevo en el camino.  
+        ¡Nos vemos en la próxima aventura! 🚀
+      </p>
+      <p>
+        Aquí te dejo un pequeño detalle 🎁:
+      </p>
+      <button id="btn">
+        <img src="patito.webp" alt="ilustracion">
+        <div class="sorpresa">
+          <p>?</p>
+        </div>
+      </button>
+      <div id="botonchao" class="botonchao">Chao!</div>
+      <audio id="audio" src="resolvi-el-problema.mp3" ></audio>
+    </section>
     <next-challenge-card></next-challenge-card>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+    function lanzarConfetti(duration = 50000, colors = ['#53c9b2', '#fb8f51']) {
+      const animationEnd = Date.now() + duration;
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      // Disparos en ráfaga desde izquierda y derecha
+      const interval = setInterval(() => {
+        const timeLeft = animationEnd - Date.now();
+        if (timeLeft <= 0) return clearInterval(interval);
+
+        const particleCount = 50 * (timeLeft / duration);
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors });
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors });
+      }, 250);
+
+      // Lluvia ligera desde ambos lados
+      (function frame() {
+        confetti({ particleCount: 2, angle: 60, spread: 55, origin: { x: 0 }, colors });
+        confetti({ particleCount: 2, angle: 120, spread: 55, origin: { x: 1 }, colors });
+        if (Date.now() < animationEnd) requestAnimationFrame(frame);
+      })();
+    }
+
+    const cajasorpresa = document.querySelector('.sorpresa');
+    const audio = document.querySelector('#audio')
+    const btn = document.getElementById('btn')
+    /* const btnchao = document.querySelector('#botonchao'); */
+
+    btn.addEventListener('click', () => {
+      btn.classList.add('dance')
+      cajasorpresa.classList.add('fade-out-animacion');
+      audio.volume = 0.5;
+      audio.play();
+      lanzarConfetti();
+      setTimeout(() => {
+        btnchao.style.display = 'block'
+      }, 5000);
+    });
+
+    /* btnchao.addEventListener('click', () => {
+      window.close();
+    }) */
+  </script>
 </body>
 </html>

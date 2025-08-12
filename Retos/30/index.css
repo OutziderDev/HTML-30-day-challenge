@@ -5,7 +5,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
   padding-bottom: 15%;
 
   & > h1 {
@@ -25,10 +24,99 @@ section {
     color: var(--color-verdoso);
   }
 
- 
+  button {
+    width: 412px;
+    height: 412px;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    & > img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    & > .sorpresa {
+      position: absolute;
+      color: white;
+      z-index: 10;
+      font-size: 10rem;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      top: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+       
+    }
+
+  }
+
+  & > .botonchao {
+    background-color: var(--color-naranja);
+    color: var(--color-darkblue);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1rem;
+    min-width: 50%;
+    margin: 3rem auto;
+    cursor: pointer;
+    transition:  all 0.3s ease;
+    display: none;
+
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
   @media (width <= 768px){
     max-width: 90%;
     padding-bottom: 30%;
 
+  }
+}
+
+.fade-out-animacion {
+  animation: fade 3s ease-out forwards;
+}
+
+.dance {
+  animation: baile 5s infinite;
+}
+
+@keyframes fade {
+  to {
+    background-color: transparent;
+    color: transparent;
+  }
+}
+
+@keyframes baile {
+  0%,100% {
+    transform: rotate(0) scale(1);
+  }
+  25% {
+    transform: rotate(25deg) scale(0.6);
+  }
+  45%{
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0) scale(1);
+  }
+
+  75% {
+    transform: rotate(-25deg) scale(0.7);
   }
 }
