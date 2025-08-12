@@ -21,12 +21,12 @@
       
       <div>
         <div id="tabs">
-          <button data-tab="tab1" class="active">1️⃣ La Secta de las Etiquetas Eternas</button>
-          <button data-tab="tab2">2️⃣ El Gran Culto del Estilo Prohibido</button>
-          <button data-tab="tab3">3️⃣ La Hermandad del Callback Infinito</button>
+          <button data-tab="tab1" class="active btn-tab">1️⃣ La Secta de las Etiquetas Eternas</button>
+          <button data-tab="tab2" class=" btn-tab">2️⃣ El Gran Culto del Estilo Prohibido</button>
+          <button data-tab="tab3" class=" btn-tab">3️⃣ La Hermandad del Callback Infinito</button>
         </div>
         <div id="tabs-content">
-          <article data-content="tabs1">
+          <article data-content="tab1" class="tab-content hidden">
             <p>Dicen que en esta secta, los iniciados <span class="cssstrong">aprenden a invocar el misterioso &lt;dialog&gt; </span> para hablar con los ancestros del DOM. Aquí no solo se enseña a usar &lt;section&gt; y &lt;article&gt; como armas sagradas, sino también a ocultar mensajes en &lt;meta&gt; para comunicarse con otros miembros de la logia.
             </p>
             <p>
@@ -35,14 +35,14 @@
             <a href="https://lenguajehtml.com/" target="_blank" rel="noopener noreferrer">🔗 Entrada restringida: https://lenguajehtml.com/</a>
           </article>
           
-          <article data-content="tabs2">
+          <article data-content="tab2" class="tab-content hidden" >
             <p>En lo profundo de esta academia, los reclutas son adoctrinados en las artes del display: none y en la magia ancestral del @keyframes.</p>
             <p>Los más avanzados pueden invocar animaciones tan fluidas que derriten GPUs.</p>
             <p>Las leyendas dicen que si pronuncias ‘Flexbox’ tres veces frente a un espejo, aparecerá el mismísimo Manz y te corregirá el gap.</p>
             <a href="https://lenguajecss.com/" target="_blank" rel="noopener noreferrer">🔗 Entrada restringida: https://lenguajecss.com/</a>
           </article>
 
-          <article data-content="tabs3">
+          <article data-content="tab3" class="tab-content hidden" >
             <p>Aquí no hay compasión. Aprenderás a manejar <em>async/await</em> como si fueran armas, a controlar el flujo del tiempo con setTimeout y a invocar a deidades con fetch.</p>
             <p>Los maestros cuentan que quien logre domar un Promise.all() sin romper nada será digno de acceder a la biblioteca sagrada de los Closures."</p>
             <a href="https://lenguajejs.com/">🔗 Entrada restringida: https://lenguajejs.com/</a>
@@ -53,5 +53,41 @@
     </section>
     <next-challenge-card></next-challenge-card>
   </main>
+  <script>
+    const tabs = document.querySelectorAll('.btn-tab')
+    const texTab = document.querySelectorAll('.tab-content')
+
+    function activeTab (tab) {
+      if(!tab) return;
+
+      tabs.forEach( btn => {
+        const tabselec = btn.dataset.tab; 
+        if(tabselec === tab){
+            btn.classList.add('active')          
+        }else{
+          btn.classList.remove('active')
+        }
+      })
+
+      texTab.forEach( texto => {
+        const textoTab = texto.dataset.content;
+        if (textoTab === tab) {
+          texto.classList.remove('hidden')
+        }else {
+          texto.classList.add('hidden')
+        }
+      })
+
+    }
+
+    tabs.forEach( tab => {
+      tab.addEventListener('click', () => {
+        const dataTab = tab.dataset.tab
+        activeTab(dataTab)    
+      })
+    })
+
+    activeTab('tab1')
+  </script>
 </body>
 </html>

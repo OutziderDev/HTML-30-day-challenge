@@ -50,6 +50,7 @@
     transition: all 0.5s ease;
     text-wrap: balance;
     padding-block: 1rem;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: var(--color-decorador);
@@ -93,6 +94,10 @@
       color: white !important;
     }
   }
+    
+  & > .hidden {
+    display: none;
+  }
 
   @media ( width <= 768px){
     & > article {
@@ -105,7 +110,7 @@
 
 @keyframes fade-left-in {
   from { 
-    transform: translateX(-100%);
+    transform: translateX(-20%);
     opacity: 0;
   }
   to {
