@@ -7,7 +7,8 @@
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  animation: fade-sidebar 0.5s ease-in-out;
+  /* animation: fadesimple 1.5s ease; */
+  /* animation: fade-sidebar 0.5s ease-in-out; */
 
   & > header {
     padding: 0.5rem;
@@ -108,5 +109,15 @@
   }
   100% {
     transform: translateX(0px);
+  }
+}
+
+
+@keyframes fadesimple {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
