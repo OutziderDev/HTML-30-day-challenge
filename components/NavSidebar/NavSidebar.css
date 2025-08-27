@@ -1,3 +1,12 @@
+:host {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+:host(.visible) {
+  opacity: 1;
+}
+
 .sidebar{
   width: 20%;
   min-height: 95dvh;
@@ -7,7 +16,7 @@
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  /* animation: fadesimple 1.5s ease; */
+  /* animation: fadesimple 0.5s ease; */
   /* animation: fade-sidebar 0.5s ease-in-out; */
 
   & > header {

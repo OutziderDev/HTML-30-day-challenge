@@ -52,6 +52,9 @@ class Sidebar extends HTMLElement {
         link.classList.add('active')
       }
     })
+
+    this.style.display= 'contents';
+    this.classList.add('visible');
   }
 }
 
