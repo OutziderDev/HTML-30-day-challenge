@@ -4,9 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reto: Día 28</title>
+  <link rel="preconnect" href="//cdn.jsdelivr.net/">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="/global.css">
   <script type="module" src="/index.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      quicklink.listen({
+        el: document.querySelector('#sidebar').shadowRoot.querySelectorAll('.sidebar a')
+      });
+    });
+  </script>
   <!-- Favicons & Manifest -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" >
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" >
