@@ -8,16 +8,9 @@
 }
 
 .sidebar{
-  width: 20%;
-  min-height: 95dvh;
-  color: #fff;
-  background-color: var(--color-darkblue);
-  border-right: thick solid var(--color-decorador);
-  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  /* animation: fadesimple 0.5s ease; */
-  /* animation: fade-sidebar 0.5s ease-in-out; */
+  height: 100%;
 
   & > header {
     padding: 0.5rem;
@@ -109,24 +102,5 @@
     & nav {
       height: max-content;
     }
-  }
-}
-
-@keyframes fade-sidebar {
-  0% {
-    transform: translateX(-400px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-
-@keyframes fadesimple {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
