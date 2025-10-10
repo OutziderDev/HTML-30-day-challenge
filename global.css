@@ -32,12 +32,12 @@ nav-sidebar {
   border-right: thick solid var(--color-decorador);
   padding: 0.5rem;
   view-transition-name: sidebar;
-  opacity: 0;
+  /* opacity: 0;
   transition: opacity 0.5s ease-in-out;
 
   &:defined {
     opacity: 1;
-  }
+  } */
 
   @media ( width <= 768px) {
     display: none;
