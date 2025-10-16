@@ -19,7 +19,7 @@ class Sidebar extends HTMLElement {
     this.shadowRoot.innerHTML = /* html*/ `
       <aside class="sidebar">
         <header>
-          <img src="/assets/images/perro-programador.webp" alt="Imagen de usuario" title="Foto de Perfíl" fetchpriority="high" >
+          <img width="258" height="258" src="/assets/images/perro-programador.webp" alt="Imagen de usuario" title="Foto de Perfíl" fetchpriority="high" >
           <span>@OutziderDev</span>
         </header>
         <nav>
@@ -53,9 +53,8 @@ class Sidebar extends HTMLElement {
       }
     })
 
-    this.style.display= 'contents';
     this.classList.add('visible');
   }
 }
 
-customElements.define('nav-sidebar', Sidebar)
+customElements.define('nav-sidebar', Sidebar);
