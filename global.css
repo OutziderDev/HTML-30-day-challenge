@@ -9,7 +9,7 @@
 }
 
 :root{
-  --color-verdoso: #53c9b2; 
+  --color-verdoso: #53c9b2;
   --color-darkblue: #0a0f1e;
   --color-light-darkblue: #101828;
   --color-decorador: #192238;
@@ -42,7 +42,7 @@ nav-sidebar {
   @media ( width <= 768px) {
     display: none;
   }
-   
+
 }
 
 next-challenge-card {
@@ -60,7 +60,7 @@ main {
 
 .menu-opc {
   background-color: var(--color-darkblue);
-  
+
   h1 {
     color: var(--color-verdoso);
     font-size: 3.5rem;

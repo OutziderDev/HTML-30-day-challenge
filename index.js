@@ -1,6 +1,7 @@
 import "./components/NavSidebar/NavSidebar.js";
-import "./components/MenuMovil/ButtonMenuMovil.js"
-import "./components/NextChallenge/NextChallenge.js"
+import "./components/MenuMovil/ButtonMenuMovil.js";
+import "./components/NextChallenge/NextChallenge.js";
+import "./components/RetoInfo/RetoInfo.js";
 
 (function () {
   // Script inline para inicializar window.va
