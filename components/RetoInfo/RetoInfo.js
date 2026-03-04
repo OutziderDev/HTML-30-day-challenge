@@ -22,7 +22,7 @@ class RetoInfo extends HTMLElement {
     const data = await reponse.json();
 
     const enunciado = this.shadowRoot.querySelector(".enunciado");
-    enunciado.innerHTML = `<strong>Reto:</strong> ${data.objetivo}`;
+    enunciado.innerHTML = `<strong>${data.titulo}</strong> <br> ${data.objetivo}`;
   }
 }
 

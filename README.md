@@ -1,4 +1,4 @@
-## 💻 Retos HTML-30-day Challenge — ManzDev 
+## 💻 Retos HTML-30-day Challenge — ManzDev
 
 Repositorio que recopila los ejercicios prácticos del **Challenge de HTML y CSS** propuesto por [ManzDev](https://lenguajehtml.com/challenge/).
 
@@ -24,21 +24,21 @@ No se trata de rehacer componentes de Bootstrap o copiar estilos de otros framew
 ## 📁 Estructura del repositorio
 ```text
 /
-├── index.html               
-├── style.css             
-├── script.js               
-├── /retos                 
+├── index.html
+├── style.css
+├── script.js
+├── /retos
 │   ├── reto-01/
 │   │   ├── index.html
 │   │   ├── style.css
-│   │   └── readme.md
+│   │   └── reto.json
 │   ├── reto-02/
 │   │   ├── index.html
 │   │   ├── style.css
-│   │   └── readme.md
+│   │   └── reto.json
 │   └── ...
 |
-├── /assets                
+├── /assets
 │   ├── fonts
 │   │   └── ...
 │   ├── icons
@@ -50,7 +50,7 @@ No se trata de rehacer componentes de Bootstrap o copiar estilos de otros framew
 │   ├── Sidebar.js
 │   └── ...
 |
-├── README.md              
+├── README.md
 └── LICENSE
 ```
 
