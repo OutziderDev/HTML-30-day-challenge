@@ -37,8 +37,8 @@ class NextChallenge extends HTMLElement {
             cardLink.href = `/Retos/${nextChallengeNumber}/index.html`;
             cardDesc.textContent = `Día ${nextChallengeNumber}`;
         } else {
-            // Si es el último reto, puedes ocultar la tarjeta o cambiar su contenido
-            cardLink.style.display = 'none';  
+            // Si es el último reto, oculta la tarjeta o cambiar su contenido
+            cardLink.style.display = 'none';
         }
     }
 }
