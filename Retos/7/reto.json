@@ -1,0 +1,4 @@
+{
+  "titulo": "Reto: Día 7",
+  "objetivo": "Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.."
+}
