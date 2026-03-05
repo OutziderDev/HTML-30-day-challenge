@@ -1,5 +1,5 @@
 section{
-
+  position: relative;
 
   & > button {
     color:white;
@@ -20,24 +20,24 @@ section{
     }
   }
 
-  & > p {
-    max-width: 10dvw;
-    z-index: 10;
+  & > [popover] {
+    max-width: 10%;
     position: absolute;
-    right: 2rem;
-    top: 5.5rem;
+    right: -85%;
+    top: -55%;
     padding: 0.8rem;
-    background-color: var(--color-verdoso);
+
     border-radius: 0.3rem;
     border: 3px double var(--color-naranja);
-    box-sizing: border-box;
+    background-color: var(--color-verdoso);
+
 
     & > strong {
       display: block;
       font-size: 1rem;
     }
 
-    &::after {
+    /* &::after {
       content: "";
       position: absolute;
       top: -1rem;
@@ -48,7 +48,8 @@ section{
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       animation: bounce 1s ease-in-out infinite;
-    }
+    } */
+
 
 
   }

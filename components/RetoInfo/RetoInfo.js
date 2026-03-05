@@ -9,10 +9,10 @@ class RetoInfo extends HTMLElement {
 
     this.shadowRoot.innerHTML = /* html */ `
       <section>
-        <button>
+        <button popovertarget="enunciado" popovertargetaction="toggle" >
           ?
         </button>
-        <p class="enunciado"><strong>Reto:</strong>  Construye una página con un párrafo que tenga enlaces internos y externos (a otros sitios web).</p>
+        <p id="enunciado" popover class="enunciado"><strong>Reto:</strong>  Construye una página con un párrafo que tenga enlaces internos y externos (a otros sitios web).</p>
       </section>
     `;
   }
