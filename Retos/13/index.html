@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,21 +25,25 @@
   <meta name="apple-mobile-web-app-title" content="HtmlChallenge" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
 </head>
+
 <body>
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
+    <reto-info></reto-info>
     <section>
-      <h1> Entradas para  "La Verdad detrás de Tailwind"</h1>
+      <h1> Entradas para "La Verdad detrás de Tailwind"</h1>
       <p>
-        Después de años de censura por parte del Pato Supremo y sus fieles devs, por fin se liberó el documental secreto <strong>"La Verdad detrás de Tailwind"</strong>.
+        Después de años de censura por parte del Pato Supremo y sus fieles devs, por fin se liberó el documental secreto
+        <strong>"La Verdad detrás de Tailwind"</strong>.
       </p>
       <p>
-        <strong>Solo hay 100 entradas disponibles</strong> para esta función única y clandestina, proyectada en los túneles debajo de la vieja sede de FreeCodeCamp.
+        <strong>Solo hay 100 entradas disponibles</strong> para esta función única y clandestina, proyectada en los
+        túneles debajo de la vieja sede de FreeCodeCamp.
         <br>
         <strong>¡Apresúrate!</strong> El Manz ya mandó a sus moderadores a sabotear el proyector.
       </p>
-      
+
       <div>
         <label for="meter">Entradas vendidas:</label>
         <meter min="0" value="64" max="100" name="meter" id="meter"></meter>
@@ -46,7 +51,7 @@
       </div>
 
       <button id="comprar">Comprar Entrada</button>
-       
+
     </section>
     <next-challenge-card></next-challenge-card>
 
@@ -55,10 +60,11 @@
       const meter = document.querySelector('#meter')
       const text = document.querySelector('.data-meter');
       btn.addEventListener('click', () => {
-        meter.value += 1; 
+        meter.value += 1;
         text.textContent = `${meter.value} /100`;
       })
     </script>
   </main>
 </body>
+
 </html>

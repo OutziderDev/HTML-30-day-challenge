@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,15 +25,19 @@
   <meta name="apple-mobile-web-app-title" content="HtmlChallenge" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
 </head>
+
 <body>
   <nav-sidebar id="sidebar"></nav-sidebar>
   <main>
     <nav-button-movil></nav-button-movil>
+    <reto-info></reto-info>
     <section>
       <h1>Termómetro de Herejía</h1>
       <p>
-        En la <strong>logia de Manz</strong>, sus seguidores no solo crean fórmulas absurdas y expulsan a los traidores que usan <code><strong>"npx add tailwind"</strong></code>,
-        también desarrollan <em>instrumentos de tortura moral</em> como esta escala. Úsala con responsabilidad para medir
+        En la <strong>logia de Manz</strong>, sus seguidores no solo crean fórmulas absurdas y expulsan a los traidores
+        que usan <code><strong>"npx add tailwind"</strong></code>,
+        también desarrollan <em>instrumentos de tortura moral</em> como esta escala. Úsala con responsabilidad para
+        medir
         tu nivel de resistencia a <strong>Tailwind</strong>, y recuerda: cuanto mayor el número... menos alma te queda.
       </p>
       <label for="tailwindSlider">Nivel de aguante a Tailwind:</label>
@@ -49,10 +54,10 @@
     const frase = document.querySelector('#fraseTailwind');
 
     slider.addEventListener('input', () => {
-      const v  = parseInt(slider.value)
-      result.textContent = v 
+      const v = parseInt(slider.value)
+      result.textContent = v
 
-       if (v <= 10) {
+      if (v <= 10) {
         frase.textContent = "Aún escribes CSS con amor. Eres salvable.";
       } else if (v <= 20) {
         frase.textContent = "Usas Tailwind... pero ocultas el panel de clases por vergüenza.";
@@ -66,4 +71,5 @@
     })
   </script>
 </body>
+
 </html>
